@@ -7,5 +7,7 @@ def bag_of_words(text):
   Returns:
     A dictionary of strings to integers.
   """
-  # XXXX! Write me!
-  pass
+  bag = {}
+  for word in text.lower().split():
+    bag[word] = bag.get(word, 0) + 1
+  return bag
